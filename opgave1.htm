@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+    <link rel="stylesheet" href="./assets/scss/opgave1.css">
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Her skal du indsætte din react kode
+        
+        // Byg en funktion som returnerer et h2 tag med teksten 'JSX er godt for maven!'. Kald funktionen med ReactDOM.render().
+        const Opg1 = () => {
+            return (
+                <div>
+                    <h2>Opgave 1: JSX er godt for maven!</h2>
+                </div>
+            )
+        }
+
+        // Byg en funktion som kan udregne og returnere summen af 10 * 10. Kald funktionen med ReactDOM.render().
+        const Opg2 = () => {
+            return (
+                <div>
+                    <h2>Opgave 2</h2>
+                    <br/>OPG 2: 10 + 10 = {10+10} 
+                </div>
+            )
+        }
+
+        // Byg en funktion som kan returnere en ordered html liste med fem af dine livretter. Kald funktionen med ReactDOM.render().
+        const Opg3 = () => {
+            return (
+                <div>
+                    <h2>Opgave 3</h2>
+                    <ol> 
+                        <li>Burger</li>    
+                        <li>Pizza</li>    
+                        <li>Mørbrad m. champignon sovs</li>    
+                        <li>Pasta m. Frikadeller</li>    
+                        <li>Is, massere af is..</li>    
+                    </ol>
+                </div>
+            )
+        }
+
+        // Byg en funktion som kan returnere to afsnit med hver deres tekst indhold efter eget valg. Kald funktionen med ReactDOM.render().
+        const Opg4 = () => {
+            return (
+                <div>
+                    <h2>Opgave 4</h2>
+                    <p>Hvad sagde Indiana Jones da han kom ind i bilforretningen??</p>
+                    <p>Harr'i'son Ford?</p>
+                </div>
+            )
+        }
+
+        // Byg en funktion som kan det samme som funktionen i punkt 4 men med et react fragment på øverste niveau. Kald funktionen med ReactDOM.render().
+        const Opg5_1 = () => {
+            return (
+                <div>
+                    <h2>Opgave 5</h2>
+                    <p>Her er første ting</p>
+                </div>
+            )
+        }
+        const Opg5_2 = () => {
+            return (
+                <p>Her er anden ting</p>
+            )
+        }
+        const Opg5 = () => {
+            return (
+                <>
+                <Opg5_1 />
+                <Opg5_2 />
+                </>
+            )
+        }
+
+        // Byg en funktion som kan returnere et input element efter eget valg. Kald funktionen med ReactDOM.render().
+        const Opg6 = () => {
+            return (
+                <div>
+                    <h2>Opgave 6</h2>
+                    <button>Hej</button>
+                </div>
+            )
+        }
+
+        // Byg en funktion som kan returnere et section tag med klassen mainwrapper. Kald funktionen med ReactDOM.render().
+        const Opg7 = () => {
+            return (
+                <div>
+                    <h2>Opgave 7</h2>
+                    <section className="Mainwrapper">
+                        <p>Det her er en section</p>
+                    </section>
+                </div> 
+            )
+        }
+
+        const Opg8_1 = () => {
+            return (
+                <h2>Opgave 8</h2>
+                )
+            }
+            
+        const Opg9_1 = () => {
+            return (
+                <h2>Opgave 9</h2>
+                )
+            }
+        
+            
+        // Byg en funktion som kan returnere resultatet af en betinget statement. 
+        // Hvis klokken er mindre end 12 skal funktionen returnere teksten Godmorgen - 
+        // ellers skal den returnere teksten Goddag. Kald funktionen med ReactDOM.render().
+        const Opg8 = () => {
+            
+            const hour = new Date().getHours()
+            let besked = "Godmorgen!"
+            if (hour > 12) {
+                besked = "Goddag!"
+            }
+            return (
+                <p>{besked}</p>
+            )
+        }
+
+        // Gentag punkt 8 men med en ternary operator. Kald funktionen med ReactDOM.render().
+        const Opg9 = () => {
+            const hour = new Date().getHours()
+            return (
+                <p>{ hour < 12 ? "Godmorgen igen!" : "Goddag igen!"}</p>
+            )
+        }
+
+        // Opgave 10: Byg en funktion der kan kalde alle de andre af opgavens funktioner. Kald funktionen med ReactDOM.render(). 
+        const App = () => {
+            return (
+                <>
+                <Opg1 />
+                <Opg2 />
+                <Opg3 />
+                <Opg4 />
+                <Opg5 />
+                <Opg6 />
+                <Opg7 />
+                <Opg8_1 />
+                <Opg8 />
+                <Opg9_1 />
+                <Opg9 />
+                </>
+            )
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        )
+
+    </script>
+
+  </body>
+</html>

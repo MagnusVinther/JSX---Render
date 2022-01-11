@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "opgave1.scss"
+    ],
+    "names": [],
+    "file": "opgave1.css"
+}
